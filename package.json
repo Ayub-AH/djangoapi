@@ -1,0 +1,11 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "python manage.py collectstatic --noinput && npm run frontend-build",
+    "frontend-build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "webpack": "^5.0.0"
+  }
+}
