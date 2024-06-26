@@ -1,5 +1,18 @@
-// webpack.config.js
 module.exports = {
   mode: 'production', // or 'development'
-  // You might not need any additional configuration if no frontend assets are involved
+  entry: './src/index.js', // Adjust the entry point as per your project structure
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
 };
