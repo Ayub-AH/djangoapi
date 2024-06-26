@@ -1,17 +1,5 @@
 // webpack.config.js
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
-  },
+  mode: 'production', // or 'development'
+  // You might not need any additional configuration if no frontend assets are involved
 };
