@@ -1,0 +1,11 @@
+[build]
+  command = "pip install -r requirements.txt && python manage.py collectstatic --noinput && npm run build"
+  publish = "build"
+
+[build.environment]
+  DJANGO_SETTINGS_MODULE = "mysite.settings.production"
+  PYTHON_VERSION = "3.8"
+  NODE_VERSION = "18.20.3"
+
+[context.production.environment]
+  DEBUG = "False"
